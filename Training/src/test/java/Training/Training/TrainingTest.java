@@ -42,7 +42,7 @@ public class TrainingTest {
 		driverAndroid = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capacidade);
 		
 
-		// testing devops jenkis server 8/04/2017
+		// testing devops jenkis server 8/04/2017 11:33
 	}
 
 	@Test
