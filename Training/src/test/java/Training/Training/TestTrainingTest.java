@@ -18,47 +18,51 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
-public class TrainingTest {
-	
-	DesiredCapabilities capacidade;
-	 AndroidDriver driverAndroid;
+public class TestTrainingTest {
 
-//	@Before
+	DesiredCapabilities capacidade;
+	AndroidDriver driverAndroid;
+
+	@Before
 	public void setUp() throws Exception {
-		
+
 		File dirAplicativo = new File("c:\\TrianguloApp");
 		File arqAplicativo = new File(dirAplicativo, "android-debug.apk");
 		capacidade = new DesiredCapabilities();
 		// definindo a plataforma que será testada.
 		capacidade.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 		// definindo o dispositivo que será testado.
-		// capacidade.setCapability(MobileCapabilityType.DEVICE_NAME, "0018903858");
-	   capacidade.setCapability("udid", "3300f86e4b43822b");
-		//capacidade.setCapability("udid", "420005c6f25c7300");
-		 capacidade.setCapability(MobileCapabilityType.DEVICE_NAME,"samsung");
-		//capacidade.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Simulator");
+		// capacidade.setCapability(MobileCapabilityType.DEVICE_NAME,
+		// "0018903858");
+		capacidade.setCapability("udid", "3300f86e4b43822b");
+		// capacidade.setCapability("udid", "420005c6f25c7300");
+		capacidade.setCapability(MobileCapabilityType.DEVICE_NAME, "samsung");
+		// capacidade.setCapability(MobileCapabilityType.DEVICE_NAME, "Android
+		// Simulator");
 		// definindo o aplicativo a ser testado.
 		capacidade.setCapability(MobileCapabilityType.APP, arqAplicativo.getAbsolutePath());
-		driverAndroid = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capacidade);
-		
+		driverAndroid = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capacidade);
 
 		// testing devops jenkis server 8/04/2017 11:33 5:49
 	}
 
 	@Test
 	public void test() throws InterruptedException {
-		//fail("Not yet implemented");
+		// fail("Not yet implemented");
 		Thread.sleep(10000);
-	//	driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='menu ']")).click();
-		Thread.sleep(5000);
-	   //driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='Consultar Serviço ']")).click();
-	//   driverAndroid.findElement(By.xpath("//*[@class='android.widget.Button' and @resource-id='button-menu-item2']")).click();
-		
+		driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='menu ']")).click();
+		Thread.sleep(10000);
+		// driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='Consultar
+		// Serviço ']")).click();
+		// driverAndroid.findElement(By.xpath("//*[@class='android.widget.Button'
+		// and @resource-id='button-menu-item2']")).click();
+		driverAndroid.findElement(By.id("button-menu-item0")).click();
+		// driverAndroid.findElementByAccessibilityId("Consultar CEP ").click();
+
 	}
-	
-	
-	
-//	public static void main(String[] args) throws MalformedURLException, InterruptedException{
-	//}
+
+	// public static void main(String[] args) throws MalformedURLException,
+	// InterruptedException{
+	// }
 
 }
