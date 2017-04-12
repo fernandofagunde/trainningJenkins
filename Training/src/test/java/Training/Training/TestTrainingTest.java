@@ -5,6 +5,7 @@ import  org.junit.Assert.*;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.channels.AsynchronousServerSocketChannel;
 import java.util.List;
 
 import org.junit.Assert;
@@ -23,7 +24,7 @@ public class TestTrainingTest {
 	DesiredCapabilities capacidade;
 	AndroidDriver driverAndroid;
 
-	@Before
+	
 	public void setUp() throws Exception {
 
 		File dirAplicativo = new File("c:\\TrianguloApp");
@@ -50,13 +51,13 @@ public class TestTrainingTest {
 	public void test() throws InterruptedException {
 		// fail("Not yet implemented");
 		Thread.sleep(10000);
-		driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='menu ']")).click();
-		Thread.sleep(10000);
+	//	driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='menu ']")).click();
+	//	Thread.sleep(10000);
 		// driverAndroid.findElement(By.xpath("//android.widget.Button[@content-desc='Consultar
 		// Serviço ']")).click();
 		// driverAndroid.findElement(By.xpath("//*[@class='android.widget.Button'
 		// and @resource-id='button-menu-item2']")).click();
-		driverAndroid.findElement(By.id("button-menu-item0")).click();
+	//	driverAndroid.findElement(By.id("button-menu-item0")).click();
 		// driverAndroid.findElementByAccessibilityId("Consultar CEP ").click();
 
 	}
