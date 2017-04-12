@@ -23,7 +23,7 @@ public class TestTrainingTest {
 	DesiredCapabilities capacidade;
 	AndroidDriver driverAndroid;
 
-	@Before
+	
 	public void setUp() throws Exception {
 
 		File dirAplicativo = new File("c:\\TrianguloApp");
@@ -46,7 +46,7 @@ public class TestTrainingTest {
 		// testing devops jenkis server 8/04/2017 11:33 5:49
 	}
 
-	@Test
+	
 	public void test() throws InterruptedException {
 		// fail("Not yet implemented");
 		Thread.sleep(10000);
